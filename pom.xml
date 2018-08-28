@@ -16,6 +16,7 @@
 
     <build>
         <plugins>
+            <!--静态代码bug扫描-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -27,12 +28,51 @@
                     <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
                 </configuration>
             </plugin>
+            <!--版本号管理-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.3</version>
             </plugin>
+            <!--打包源代码-->
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--这个有点晕,生成可执行jar包什么的-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-assembly-plugin</artifactId>-->
+                <!--<version>3.0.0</version>-->
+                <!--<configuration>-->
+                    <!--<archieve>-->
+                        <!--<manifest>-->
+                            <!--<mainClass>com.xlx.Test</mainClass>-->
+                        <!--</manifest>-->
+                    <!--</archieve>-->
+                    <!--<descriptorRefs>-->
+                        <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
+                    <!--</descriptorRefs>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <!--tomcat插件-->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>8080</port>
+                    <path>/</path>
+                </configuration>
+            </plugin>
         </plugins>
-
     </build>
 </project>
