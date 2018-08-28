@@ -13,7 +13,6 @@
         <module>engineering</module>
     </modules>
 
-
     <build>
         <plugins>
             <!--静态代码bug扫描-->
