@@ -34,6 +34,7 @@ public class Test extends AbstractMojo {
         System.out.println("my first maven plugin message is : " + message);
         System.out.println("my first maven plugin options is : " + options);
         System.out.println("my first maven plugin args from evm is : " + args);
+
     }
 
 }

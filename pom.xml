@@ -11,6 +11,7 @@
     <modules>
         <module>design-patterns</module>
         <module>engineering</module>
+        <module>corejava</module>
     </modules>
 
     <build>

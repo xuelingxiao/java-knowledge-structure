@@ -11,29 +11,29 @@
 
     <artifactId>design-patterns</artifactId>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.xlx</groupId>
-                <artifactId>engineering</artifactId>
-                <version>1.0-SNAPSHOT</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>xlxTest</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <message>${project.baseUri}</message>
-                    <options>
-                        <option>one</option>
-                        <option>two</option>
-                    </options>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>com.xlx</groupId>-->
+                <!--<artifactId>engineering</artifactId>-->
+                <!--<version>1.0-SNAPSHOT</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>xlxTest</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<configuration>-->
+                    <!--<message>${project.baseUri}</message>-->
+                    <!--<options>-->
+                        <!--<option>one</option>-->
+                        <!--<option>two</option>-->
+                    <!--</options>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
 </project>
