@@ -1,6 +1,7 @@
 package com.xlx.pattern;
 
 
+import com.xlx.pattern.abstractfactory.*;
 import com.xlx.pattern.proxy.jdk.Agent;
 import com.xlx.pattern.proxy.jdk.Car;
 import com.xlx.pattern.proxy.jdk.QQCar;
@@ -31,8 +32,12 @@ public class Program {
 //            outputStream.close();
 
             // 使用自定义的代理模式
-            Car car = (Car)new MyAgent().getInstance(new QQCar());
-            car.sale();
+//            Car car = (Car)new MyAgent().getInstance(new QQCar());
+//            car.sale();
+
+            PCAbstractFactory factory = new MacFactory();
+            CPU cpu = factory.createCPU();
+            RAM ram = factory.createRAM();
 
         }catch (Exception e){
             e.printStackTrace();

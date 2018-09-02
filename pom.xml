@@ -12,6 +12,7 @@
         <module>design-patterns</module>
         <module>engineering</module>
         <module>corejava</module>
+        <module>threads</module>
     </modules>
 
     <build>
