@@ -1,0 +1,41 @@
+package com.xlx.threads.threads01;
+
+public class SyncDubbo2 {
+    static class Main{
+        public int i =10;
+        public synchronized void operateionSup() {
+            try {
+                i--;
+                System.out.println("Main print i=" + i);
+                Thread.sleep(100);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    static class Sub extends Main{
+        public synchronized void operateionSub() {
+            try {
+                while (i > 0) {
+                    i--;
+                    System.out.println("sub print i=" + i);
+                    Thread.sleep(100);
+                    this.operateionSup();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Runnable() {
+            public void run() {
+                Sub sub = new Sub();
+                sub.operateionSub();
+            }
+        });
+        t1.start();
+    }
+}

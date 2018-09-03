@@ -23,7 +23,7 @@
 //        System.out.println("代理开始了....");
 //        // 这里必须使用方法invokeSuper,invoke会导致循环调用
 //        methodProxy.invokeSuper(o,objects);
-//        System.out.println("代理开始了....");
+//        System.out.println("代理结束了....");
 //        return null;
 //    }
 //}
