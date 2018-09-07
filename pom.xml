@@ -13,6 +13,7 @@
         <module>engineering</module>
         <module>corejava</module>
         <module>threads</module>
+        <module>spring</module>
     </modules>
 
     <dependencies>

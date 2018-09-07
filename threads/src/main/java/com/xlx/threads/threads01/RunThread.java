@@ -1,32 +1,28 @@
 package com.xlx.threads.threads01;
 
-public class RunThread extends Thread {
+public class RunThread extends Thread{
 
-    private boolean isDoing = true;
-
-    public void setIsDoing(boolean isDoing) {
-        this.isDoing = isDoing;
+    private volatile boolean isRunning = true;
+    private void setRunning(boolean isRunning){
+        this.isRunning = isRunning;
     }
 
-    public void run() {
-        while (isDoing) {
-            System.out.println("RunThread is running...");
+    public void run(){
+        System.out.println("进入run方法..");
+        int i = 0;
+        while(isRunning == true){
+            //..
         }
-        System.out.println("RunThread stoped...");
+        System.out.println("线程停止");
     }
 
-    public static void main(String[] args) {
-        try {
-            RunThread thread = new RunThread();
-            thread.start();
-            Thread.sleep(3000);
-            thread.setIsDoing(false);
-            System.out.println("RunThread  set isDoing=false");
-            Thread.sleep(1000);
-            System.out.println(thread.isDoing);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public static void main(String[] args) throws InterruptedException {
+        RunThread rt = new RunThread();
+        rt.start();
+        Thread.sleep(1000);
+        rt.setRunning(false);
+        System.out.println("isRunning的值已经被设置了false");
     }
+
+
 }
