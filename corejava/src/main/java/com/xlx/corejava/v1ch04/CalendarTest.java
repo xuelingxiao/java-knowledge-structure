@@ -2,6 +2,7 @@ package com.xlx.corejava.v1ch04;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Collection;
 
 public class CalendarTest {
 
@@ -13,6 +14,7 @@ public class CalendarTest {
         date = date.minusDays(today - 1);
         DayOfWeek weekday = date.getDayOfWeek();
         int value = weekday.getValue();
+
 
         System.out.println("Mon Tue Wed Thu Fri Sat Sun");
         for (int i = 1; i < value; i++) {
