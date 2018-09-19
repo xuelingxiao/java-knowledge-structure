@@ -113,3 +113,11 @@ hs_err_pid*
 *.iml
 out
 gen
+.gitignore
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml
+src/main/java/com/xlx/rest/RestApplication.java
+src/main/resources/
+src/test/
