@@ -121,3 +121,6 @@ pom.xml
 src/main/java/com/xlx/rest/RestApplication.java
 src/main/resources/
 src/test/
+!/threads/pom.xml
+!/.gitignore
+/rest/mvnw.cmd
