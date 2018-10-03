@@ -1,4 +1,4 @@
-package serialization;
+package com.xlx.serialization;
 
 import com.baidu.bjf.remoting.protobuf.FieldType;
 import com.baidu.bjf.remoting.protobuf.annotation.Protobuf;

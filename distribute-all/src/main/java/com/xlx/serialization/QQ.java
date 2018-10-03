@@ -1,4 +1,4 @@
-package serialization;
+package com.xlx.serialization;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

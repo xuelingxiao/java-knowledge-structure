@@ -1,4 +1,4 @@
-package serialization;
+package com.xlx.serialization;
 
 import com.alibaba.fastjson.JSON;
 import com.baidu.bjf.remoting.protobuf.Codec;
