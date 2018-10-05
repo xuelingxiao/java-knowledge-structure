@@ -14,6 +14,7 @@
         <module>corejava</module>
         <module>threads</module>
         <module>distribute-all</module>
+        <module>mvc-stuff</module>
     </modules>
 
     <dependencies>
