@@ -46,7 +46,7 @@ public class DistributeLock {
             if (!lessThanLockId.isEmpty()){
                 String prevLockID = lessThanLockId.last();
                 zooKeeper.exists(prevLockID,new LockWatcher(countDownLatch));
-                countDownLatch.await(sessionTimeout,TimeUnit.MICROSECONDS);
+                countDownLatch.await(sessionTimeout,TimeUnit.MILLISECONDS);
                 System.out.println(Thread.currentThread().getName()+" 成功获取锁：["+lockID+"]");
             }
         }catch (Exception e){e.printStackTrace();}
