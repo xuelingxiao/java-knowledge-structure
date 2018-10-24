@@ -1,6 +1,9 @@
 package com.xlx.mvc.web.controller;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.jmx.export.annotation.ManagedAttribute;
+import org.springframework.jmx.export.annotation.ManagedOperation;
+import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
+@ManagedResource(objectName = "mvc:name=HomeController")
 public class HomeController {
 
     @GetMapping("/npe1")
@@ -19,6 +23,7 @@ public class HomeController {
 
     @GetMapping("/npe2")
     @ResponseBody
+    @ManagedOperation
     public String npe2() throws NullPointerException {
         throw new NullPointerException();
     }
@@ -31,6 +36,7 @@ public class HomeController {
 
     @GetMapping("/")
     @ResponseBody
+    @ManagedOperation
     public String hello() throws BindException {
         throw new BindException(new Object(),"test");
     }
